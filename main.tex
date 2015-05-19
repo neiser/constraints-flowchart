@@ -1,8 +1,10 @@
 \documentclass{article}
 
+% the following is needed to 
+% get the inkscape generated
+% code to compile
 \usepackage{graphicx,color,tabularx,csquotes}
 \graphicspath{{gfx/}}
-
 \newcommand{\Lag}{\mathcal{L}}
 \newcommand{\inkText}[2]{
   \begin{tabular}{>{\centering\hspace{0pt}}p{#1\linewidth}}
@@ -10,20 +12,11 @@
   \end{tabular}
   }
 
+% this is needed to make the page fit the figure
+\usepackage[margin=0cm,paperheight=15.9cm,paperwidth=7.4cm]{geometry}
+
 \begin{document}
-
-\begin{figure}
-  \centering
-  \input{gfx/constraint.pdf_tex}
-  \caption[Constraint analysis as a flowchart]{Constraint analysis as
-    a flowchart. The number of degrees of freedom is abbreviated with
-    \#DoF. The physical requirement that the constraints are conserved
-    in time is crucial for the resulting conditions on the parameters
-    $a$. The case that no primary constraints appear is trivial. Note
-    that one can obtain a non-physical theory even though $\Lag$ is
-    the most general Lagrangian.  Refer to
-    diploma thesis for further explanation, especially
-    for the option \enquote{depends on $a$}.}
-\end{figure}
-
+\pagestyle{empty}%
+\setlength{\linewidth}{11cm}%
+\noindent\input{gfx/constraint.pdf_tex}%
 \end{document}

@@ -1,5 +1,29 @@
 \documentclass{article}
 
+\usepackage{graphicx,color,tabularx,csquotes}
+\graphicspath{{gfx/}}
+
+\newcommand{\Lag}{\mathcal{L}}
+\newcommand{\inkText}[2]{
+  \begin{tabular}{>{\centering\hspace{0pt}}p{#1\linewidth}}
+    #2
+  \end{tabular}
+  }
+
 \begin{document}
-Hello!
+
+\begin{figure}
+  \centering
+  \input{gfx/constraint.pdf_tex}
+  \caption[Constraint analysis as a flowchart]{Constraint analysis as
+    a flowchart. The number of degrees of freedom is abbreviated with
+    \#DoF. The physical requirement that the constraints are conserved
+    in time is crucial for the resulting conditions on the parameters
+    $a$. The case that no primary constraints appear is trivial. Note
+    that one can obtain a non-physical theory even though $\Lag$ is
+    the most general Lagrangian.  Refer to
+    diploma thesis for further explanation, especially
+    for the option \enquote{depends on $a$}.}
+\end{figure}
+
 \end{document}
